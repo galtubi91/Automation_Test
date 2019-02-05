@@ -54,7 +54,6 @@ test('Click on previous nav button', async () => {
             await apesterIframe.click(`[data-testid="navButton-left"]`);
         }
     }
-    expect(playerEvents).toContain('cover_clicked' && 'picked_answer')
 
     function checkPickedAnswerTruthy(eventObj) {
         if (eventObj.event === 'picked_answer') {
