@@ -4,7 +4,7 @@
   "description": "Automation test for apeter",
   "main": "index.js",
   "scripts": {
-    "test": "jest test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

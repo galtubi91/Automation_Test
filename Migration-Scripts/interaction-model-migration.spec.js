@@ -1,4 +1,4 @@
-const initBrowser = require('../puppeteer/setup');
+const initBrowser = require('puppeteer');
 
 let browser;
 let pages;
@@ -16,7 +16,9 @@ function prepareURL(interactionId) {
 
 beforeAll(async () => {
     jest.setTimeout(450000);
-    browser = await initBrowser();
+    browser = await puppeteer.launch({
+        headless: false,
+    });
     pages = await browser.pages();
     await pages[0].setCookie(cookies);
     await pages[0].setViewport({
