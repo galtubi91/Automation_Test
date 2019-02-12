@@ -2,8 +2,7 @@ const puppeteer = require("puppeteer");
 
 let browser;
 let pages;
-const testUnit =
-    "https://renderer.stg.apester.com/v2/5c52fce87e45a0dfb4d62e30?preview=true&iframe_preview=true";
+const testUnit = "https://renderer.stg.apester.com/v2/5c52fce87e45a0dfb4d62e30?preview=true&iframe_preview=true";
 let apesterIframe;
 const playerCrashWithException = [];
 
