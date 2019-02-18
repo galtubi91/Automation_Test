@@ -13,7 +13,7 @@ const interactionIds = ['5b6aaeaeafc9e430a21caa58', '5bead4883cea789d6b5534ec', 
 function prepareURL(interactionId) {
   return `https://app.apester.com/editor/${interactionId}?isJourney=false&m=false`;
 }
-/* eslint-disable no-undef */
+
 beforeAll(async () => {
   jest.setTimeout(450000);
   browser = await puppeteer.launch({
@@ -31,7 +31,6 @@ beforeAll(async () => {
 });
 
 test('remove story summary slide', async () => {
-  /* eslint-disable no-await-in-loop */
   for (let i = 0; i < interactionIds.length; i += 1) {
     const url = await prepareURL(interactionIds[i]);
     await pages[0].goto(url);

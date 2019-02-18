@@ -43,7 +43,6 @@ beforeAll(async () => {
 });
 
 test('Default layout', async () => {
-    await pages[0].waitFor(5000);
     await pages[0].waitFor('div[class=editable-background]');
     await pages[0].type('div[model="slide.title.value"]', 'Default layout');
     let slideAnswers = await pages[0].$$('div[ng-model="option.value"]');

@@ -99,4 +99,5 @@ test("Image in focus ", async () => {
 
 afterAll(async () => {
     await browser.close();
+    //send alert in slack
 });
