@@ -10,7 +10,7 @@ let apesterIframe;
 beforeAll(async () => {
     jest.setTimeout(40000);
     browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         executablePath: '/Applications/Google Chrome 2.app/Contents/MacOS/Google Chrome'
 
     });

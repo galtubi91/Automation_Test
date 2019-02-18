@@ -10,7 +10,7 @@ const mobileUnit = 'https://renderer.apester.com/v2/5c50834a69eb4163fed43d95?pre
 beforeAll(async () => {
   jest.setTimeout(15000);
   browser = await puppeteer.launch({
-    headless: false
+    headless: true
   });
   const pages = await browser.pages();
   await pages[0].goto(testUnit, {

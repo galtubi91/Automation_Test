@@ -12,7 +12,7 @@ const playerEvents = [];
 beforeAll(async () => {
     jest.setTimeout(25000);
     browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
     });
     pages = await browser.pages();
     await pages[0].goto(testUnit, {
